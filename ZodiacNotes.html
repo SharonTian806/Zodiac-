@@ -1,0 +1,177 @@
+<html>
+ <head>
+   <title> Zodiac Notes </title>
+     <script>
+        function fortune()
+      {
+        var month = document.getElementById("userM").value;
+          var day = document.getElementById("userD").value;
+
+        if ((month == 1 && (day >= 20 && day <= 31)) ||  (month == 2 && (day >= 1 && day <= 18)))
+        {
+
+            document.getElementById("message").innerHTML = "Aquarius: honest, loyal, friendly";
+            document.getElementById("symbol").innerHTML = "<img src = 'aquarius.png'>";
+          }
+        if ((month == 2 && (day >= 19 && day <= 28)) ||  (month == 3 && (day >= 1 && day <= 20)))
+          {
+
+              document.getElementById("message").innerHTML = "Pisces: imaginative, compassionate, intuitive";
+              document.getElementById("symbol").innerHTML = "<img src = 'picses.png'>";
+            }
+
+          if ((month == 3 && (day >= 21 && day <= 31)) ||  (month == 4 && (day >= 1 && day <= 19)))
+          {
+
+              document.getElementById("message").innerHTML = "Aries: adventurous, confident, dynamic";
+              document.getElementById("symbol").innerHTML = "<img src = 'aries.png'>";
+            }
+
+          if ((month == 4 && (day >= 20 && day <= 30)) ||  (month == 5 && (day >= 1 && day <= 20)))
+          {
+
+              document.getElementById("message").innerHTML = "Taurus: reliable, patient, practical";
+              document.getElementById("symbol").innerHTML = "<img src = 'taurus.png'>";
+            }
+
+          if ((month == 5 && (day >= 21 && day <= 31)) ||  (month == 6 && (day >= 1 && day <= 20)))
+          {
+
+              document.getElementById("message").innerHTML = "Gemini: versatile, witty, lively";
+              document.getElementById("symbol").innerHTML = "<img src = 'gemini.png'>";
+            }
+
+          if ((month == 6 && (day >= 21 && day <= 30)) ||  (month == 7 && (day >= 1 && day <= 22)))
+          {
+
+              document.getElementById("message").innerHTML = "Cancer: emotional, protective, cautious";
+              document.getElementById("symbol").innerHTML = "<img src = 'cancer.png'>";
+            }
+
+          if ((month == 7 && (day >= 23 && day <= 31)) ||  (month == 8 && (day >= 1 && day <= 22)))
+          {
+
+              document.getElementById("message").innerHTML = "Leo: warmhearted, creative, expansive";
+              document.getElementById("symbol").innerHTML = "<img src = 'leo.png'>";
+            }
+
+          if ((month == 8 && (day >= 23 && day <= 31)) ||  (month == 9 && (day >= 1 && day <= 22)))
+          {
+
+              document.getElementById("message").innerHTML = "Virgo: modest, reliable, diligent";
+              document.getElementById("symbol").innerHTML = "<img src = 'virgo.png'>";
+            }
+
+          if ((month == 9 && (day >= 23 && day <= 30)) ||  (month == 10 && (day >= 1 && day <= 22)))
+          {
+
+              document.getElementById("message").innerHTML = "Libra: diplomatic, idealistic, charming";
+              document.getElementById("symbol").innerHTML = "<img src = 'libra.png'>";
+            }
+
+          if ((month == 10 && (day >= 23 && day <= 31)) ||  (month == 11 && (day >= 1 && day <= 21)))
+          {
+
+              document.getElementById("message").innerHTML = "Scorpio: determined, passionate, magnetic";
+              document.getElementById("symbol").innerHTML = "<img src = 'scorpio.png'>";
+            }
+
+          if ((month == 11 && (day >= 22 && day <= 30)) ||  (month == 12 && (day >= 1 && day <= 21)))
+          {
+
+              document.getElementById("message").innerHTML = "Sagittarius: optimistic, jovial, honest";
+              document.getElementById("symbol").innerHTML = "<img src = 'sagittarius.png'>";
+            }
+
+          if ((month == 12 && (day >= 22 && day <= 31)) ||  (month == 1 && (day >= 1 && day <= 19)))
+          {
+
+              document.getElementById("message").innerHTML = "Capricorn: practical, patient, disciplined";
+              document.getElementById("symbol").innerHTML = "<img src = 'capricorn.png'>";
+            }
+          }
+
+        </script>
+        <style>
+        body {
+      border-bottom: dotted white;
+      background-image: url("starrysky.jpg");
+      }
+
+      #symbol {
+        padding-left: 300px;
+      }
+
+      #message {
+        font-family: monospace;
+        text-align: center;
+        color: white;
+        text-align: center;
+        text-shadow: grey;
+        font-size: 30px;
+        padding-bottom: 250p;
+      }
+
+      p {
+      color: white;
+      font-family: monospace;
+      font-size: 20px;
+      border-radius: 12px;
+      border-color: white;
+      border-style: groove;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+      }
+      #button {
+        color: white;
+        text-decoration: underline;
+        background-color: black;
+        margin-left: 450px;
+        font-size: 15px;
+        border-radius: 12px;
+        font-family: monospace;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width: 150px;
+      }
+
+       #button:hover {
+        background-color: white;
+        color: black;
+
+      }
+
+          h2 {
+            text-shadow: 2px 2px grey;
+            color: white;
+            font-family: monospace;
+            font-size: 30px;
+            text-align: center;
+            outline: groove;
+            outline-width: thick;
+            outline-color: white;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-decoration: overline underline;
+          }
+          </style>
+      </head>
+
+  <body>
+    <h2> || Horoscope || </h2>
+
+    <p> A horoscope is an astrological chart or diagram representing
+    the positions of the Sun, Moon, planets, astrological aspects
+    and sensitive angles at the time of an event, such as
+    the moment of a person's birth. </p>
+
+    <input type = "text" value = "Month" id = "userM">
+    <input type = "text" value = "Day" id = "userD">
+    <input type = "button" id = "button" value = "SUBMIT" onclick = "fortune()">
+    <br><br><br>
+    <span id = "message"></span>
+    <span id = "symbol"></span>
+
+    </body>
+</html>
